@@ -27,6 +27,16 @@ app:
     secret: ${JWT_SECRET:change-me-in-production-this-must-be-at-least-256-bits-long-for-hs256}
     expiration-ms: ${JWT_EXPIRATION_MS:86400000}
 
+# Spring AI Configuration
+# The API key MUST be provided via environment variable. Never commit it.
+spring.ai:
+  openai:
+    api-key: ${OPENAI_API_KEY:}
+    chat:
+      options:
+        model: ${AI_MODEL:gpt-4o-mini}
+        temperature: 0.3
+
 logging:
   level:
     root: INFO
