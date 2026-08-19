@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+app:
+  jwt:
+    secret: test-secret-key-that-is-long-enough-for-hmac-sha256-algorithm-minimum
+    expiration-ms: 3600000
+
+logging:
+  level:
+    root: WARN
+    com.example.aisupport: DEBUG
